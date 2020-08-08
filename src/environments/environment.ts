@@ -7,6 +7,8 @@ export const environment = {
   API: 'http://localhost:3000/'
 };
 
+// json-server --watch db.json
+
 /*
  * In development mode, to ignore zone related error stack frames such as
  * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
