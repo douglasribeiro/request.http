@@ -4,7 +4,6 @@ import { Location } from '@angular/common';
 import { CursosService } from 'requests-http/src/app/cursos/cursos.service';
 import { AlertModalService } from 'src/app/shared/alert-modal.service';
 import { ActivatedRoute } from '@angular/router';
-import { cursorTo } from 'readline';
 import { map, switchMap } from 'rxjs/operators';
 
 @Component({
@@ -38,18 +37,21 @@ export class CursosFormComponent implements OnInit {
       }
     )
 */
-
+/*
 this.route.params
 .pipe(
   map((params: any) => params['id']),
   switchMap(id => this.service.loadById(id))
 )
 .subscribe(curso => this.updateForm(curso));
+*/
+
+  const curso = this.route.snapshot.data['curso'];
 
     this.form = this.fb.group({
-      id: [null],
+      id: [curso.id],
       nome: [
-        null,
+        curso.nome,
         [
           Validators.required,
           Validators.minLength(3),
@@ -59,12 +61,14 @@ this.route.params
     });
   }
 
+  /*
   updateForm(curso){
     this.form.patchValue({
       id: curso.id,
       nome: curso.nome
     })
   }
+*/
 
   onSubmit() {
     this.submited = true;
