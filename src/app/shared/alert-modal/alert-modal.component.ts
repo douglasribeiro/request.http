@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {  BsModalRef } from 'ngx-bootstrap/modal'
+import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-alert-modal',
@@ -16,7 +16,7 @@ export class AlertModalComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClose(){
+  onClose() {
     this.bsModalRef.hide();
   }
 

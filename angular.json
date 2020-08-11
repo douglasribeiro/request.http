@@ -146,8 +146,5 @@
       }
     }
   },
-  "defaultProject": "requests-http",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "requests-http"
 }
